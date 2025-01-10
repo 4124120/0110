@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水上活動 - 夢想度假村</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+        header {
+            background: url('img/water-activities.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2rem;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .back-btn:hover {
+            background-color: #3e8e41;
+        }
+        .activity-details {
+            margin-top: 30px;
+        }
+        .activity-details h3 {
+            margin-bottom: 10px;
+        }
+        .activity-details ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .activity-details li {
+            background: #f9f9f9;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .form-container {
+            margin-top: 30px;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h3 {
+            margin-bottom: 20px;
+        }
+        .form-container input, .form-container select, .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .form-container button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #3e8e41;
+        }
+        .success-message {
+            display: none;
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>水上活動</h1>
+        <p>享受水上的樂趣，體驗各種豐富的水上活動。</p>
+    </header>
+    <div class="content">
+        <h2>水上活動介紹</h2>
+        <p>在夢想度假村的海岸，您可以享受多種刺激的水上活動，從划船、潛水到水上摩托等，我們為您提供無盡的樂趣與冒險。</p>
+
+        <div class="activity-details">
+            <h3>活動詳情</h3>
+            <ul>
+                <li>活動時間：每日9:00 - 17:00</li>
+                <li>活動內容：划船、獨木舟、浮潛、水上摩托等</li>
+                <li>適合人群：所有喜愛水上活動的人群，適合家庭和朋友</li>
+                <li>導遊服務：專業教練提供指導，確保安全並幫助您學習技能</li>
+            </ul>
+        </div>
+
+        <!-- 報名表單 -->
+        <div class="form-container">
+            <h3>立即報名水上活動</h3>
+            <form id="registrationForm">
+                <input type="text" name="name" id="name" placeholder="您的姓名" required>
+                <input type="email" name="email" id="email" placeholder="您的電子郵件" required>
+                <select name="activity-type" id="activity-type" required>
+                    <option value="划船">划船</option>
+                    <option value="獨木舟">獨木舟</option>
+                    <option value="浮潛">浮潛</option>
+                    <option value="水上摩托">水上摩托</option>
+                </select>
+                <textarea name="message" id="message" placeholder="留言或特殊需求" rows="4"></textarea>
+                <button type="submit">報名</button>
+            </form>
+            <div class="success-message" id="successMessage">
+                <p>報名成功！我們會儘快聯繫您。</p>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-btn">返回主畫面</a>
+    </div>
+
+    <script>
+        // 监听表单提交事件
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+            event.preventDefault();  // 防止表单刷新页面
+
+            // 显示成功消息
+            document.getElementById("successMessage").style.display = "block";
+            
+            // 隐藏表单
+            document.querySelector(".form-container form").style.display = "none";
+        });
+    </script>
+</body>
+</html>

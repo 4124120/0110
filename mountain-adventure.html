@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>山林探索 - 夢想度假村</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+        header {
+            background: url('img/山林.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2rem;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .back-btn:hover {
+            background-color: #3e8e41;
+        }
+        .adventure-details {
+            margin-top: 30px;
+        }
+        .adventure-details h3 {
+            margin-bottom: 10px;
+        }
+        .adventure-details ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .adventure-details li {
+            background: #f9f9f9;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .testimonial {
+            margin-top: 40px;
+        }
+        .testimonial-item {
+            background: #f9f9f9;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .registration-form {
+            margin-top: 30px;
+        }
+        .registration-form input {
+            padding: 10px;
+            margin: 5px;
+            width: 250px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .registration-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .registration-form button:hover {
+            background-color: #3e8e41;
+        }
+        .success-message {
+            display: none;
+            color: green;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>山林探索</h1>
+        <p>探索壯麗山林景色，體驗大自然的奧秘與美麗。</p>
+    </header>
+    <div class="content">
+        <h2>山林探索活動介紹</h2>
+        <p>夢想度假村的山林探索活動將帶您深入壯麗的山脈，了解大自然的奇妙與奧秘。無論是步道徒步旅行還是深度生態觀察，您都能在這裡找到與自然親密接觸的機會，體驗前所未有的冒險。</p>
+
+        <div class="adventure-details">
+            <h3>活動詳情</h3>
+            <ul>
+                <li>活動時間：每週二至週六，上午8:00 - 12:00</li>
+                <li>適合人群：所有年齡段，從初學者到經驗豐富的徒步旅行者皆可參加</li>
+                <li>活動內容：穿越原始森林，觀察當地動植物，享受山林間的美麗景觀</li>
+                <li>導遊服務：專業導遊陪同解說，保證活動安全並提供豐富的知識講解</li>
+            </ul>
+        </div>
+
+        <!-- 報名表單區域 -->
+        <div class="registration-form">
+            <h3>報名參加山林探索活動</h3>
+            <input type="text" id="name" placeholder="姓名" required>
+            <input type="email" id="email" placeholder="電子郵件" required>
+            <button onclick="register()">報名</button>
+            <div class="success-message" id="success-message">
+                <p>報名成功！我們會盡快與您聯繫。</p>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-btn">返回主畫面</a>
+    </div>
+
+    <script>
+        function register() {
+            // 確認表單輸入
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            
+            // 簡單檢查輸入是否有效
+            if (name && email) {
+                // 顯示成功消息
+                document.getElementById("success-message").style.display = "block";
+            } else {
+                alert("請填寫所有欄位！");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高級餐廳 - 夢想度假村</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+        header {
+            background: url('img/餐廳.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2rem;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .back-btn:hover {
+            background-color: #3e8e41;
+        }
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .menu-item {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .menu-item img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        .menu-item h3 {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>高級餐廳</h1>
+        <p>品味當地美食與國際佳餚的完美結合。</p>
+    </header>
+    <div class="content">
+        <h2>餐廳介紹</h2>
+        <p>我們的高級餐廳提供精緻的料理，結合當地的新鮮食材和世界各地的美食。無論是浪漫的晚餐還是家庭聚會，這裡都是您的理想選擇。</p>
+        <p>我們的主廚精心設計了各式菜單，確保每一位顧客都能品嚐到獨特的美味。</p>
+        
+        <h3>推薦菜單</h3>
+        <div class="menu">
+            <div class="menu-item">
+                <img src="img/海鮮拼盤.jpg" alt="菜肴1" height="250px" width="250px">
+
+                <h3>海鮮拼盤</h3>
+                <p>新鮮的海鮮，完美搭配的佐料。</p>
+            </div>
+            <div class="menu-item">
+                <img src="img/和牛.jpg" alt="菜肴2" height="250px" width="250px">
+                <h3>和牛扒</h3>
+                <p>選用頂級和牛，精緻的烹調方式。</p>
+            </div>
+            <div class="menu-item">
+                <img src="img/甜點.jpg" alt="菜肴3" height="250" width="250px">
+                <h3>手工甜點</h3>
+                <p>自製甜點，帶來的完美口感。</p>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-btn">返回主畫面</a>
+    </div>
+</body>
+</html>

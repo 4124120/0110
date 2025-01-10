@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>瑜伽課程 - 夢想度假村</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+        header {
+            background: url('img/瑜珈.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2rem;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .back-btn:hover {
+            background-color: #3e8e41;
+        }
+        .class-details {
+            margin-top: 30px;
+        }
+        .class-details h3 {
+            margin-bottom: 10px;
+        }
+        .class-details ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .class-details li {
+            background: #f9f9f9;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .registration-form {
+            margin-top: 30px;
+        }
+        .registration-form input {
+            padding: 10px;
+            margin: 5px;
+            width: 250px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .registration-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .registration-form button:hover {
+            background-color: #3e8e41;
+        }
+        .success-message {
+            display: none;
+            color: green;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>瑜伽課程</h1>
+        <p>在大自然中，透過瑜伽達到身心的和諧與放鬆。</p>
+    </header>
+    <div class="content">
+        <h2>瑜伽課程介紹</h2>
+        <p>夢想度假村提供的瑜伽課程，將帶領您在寧靜的大自然中進行放鬆與冥想，讓每位學員都能在此找到身心靈的平衡與放鬆。</p>
+
+        <div class="class-details">
+            <h3>課程詳情</h3>
+            <ul>
+                <li>課程時間：每週一至週五，上午7:00 - 8:30</li>
+                <li>適合人群：所有年齡段，無需經驗，適合初學者與進階者</li>
+                <li>課程內容：瑜伽姿勢練習、冥想放鬆、呼吸法等</li>
+                <li>導師服務：由經驗豐富的瑜伽老師指導，讓學員深入體會瑜伽的真正意義</li>
+            </ul>
+        </div>
+
+        <!-- 報名表單區域 -->
+        <div class="registration-form">
+            <h3>報名參加瑜伽課程</h3>
+            <input type="text" id="name" placeholder="姓名" required>
+            <input type="email" id="email" placeholder="電子郵件" required>
+            <button onclick="register()">報名</button>
+            <div class="success-message" id="success-message">
+                <p>報名成功！我們會盡快與您聯繫。</p>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-btn">返回主畫面</a>
+    </div>
+
+    <script>
+        function register() {
+            // 確認表單輸入
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            
+            // 簡單檢查輸入是否有效
+            if (name && email) {
+                // 顯示成功消息
+                document.getElementById("success-message").style.display = "block";
+            } else {
+                alert("請填寫所有欄位！");
+            }
+        }
+    </script>
+</body>
+</html>
